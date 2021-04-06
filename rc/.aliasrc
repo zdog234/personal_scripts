@@ -1,0 +1,21 @@
+alias dc="docker-compose"
+alias ga="git add" 
+alias gc="git commit"
+alias gd="git diff"
+alias gp="git push"
+alias gs="git status"
+alias ktl="kubectl"
+alias remimp="autoflake --in-place --remove-unused-variables --recursive --remove-all-unused-imports ."
+
+
+alias python3=python3.9
+alias python=python3
+
+# ipython
+alias ipy="python3 -m IPython"
+alias ipy3="python3 -m IPython"
+alias ipy36="python3.6 -m IPython"
+alias ipy37="python3.7 -m IPython"
+alias ipy38="python3.8 -m IPython"
+alias ipy39="python3.9 -m IPython"
+alias ipy310="python3.10 -m IPython"
