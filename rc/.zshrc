@@ -2,6 +2,10 @@ shout() { echo "$0: $*" >&2; }
 die() { shout "$*"; exit 111; }
 try() { "$@" || die "cannot $*"; }
 
+rc=`dirname $0`
+scripts="$rc/.."
+scripts=$scripts:A
+
 # compiler stuff
 export LDFLAGS="-L/usr/local/opt/zlib/lib"
 export CPPFLAGS="-I/usr/local/opt/zlib/include"
@@ -13,6 +17,13 @@ eval "$(pyenv init -)"
 
 bindkey '^H' backward-kill-word
 bindkey '^[[3;5~' kill-word
+
+
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+  autoload -U +X bashcompinit && bashcompinit
+  autoload -U +X compinit && compinit
+fi
 
 # Created by `pipx` on 2021-03-25 17:57:03
 export PATH="$PATH:$HOME/.local/bin"
