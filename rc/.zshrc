@@ -13,7 +13,7 @@ export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
 
 eval "$(pyenv init -)"
 
-. `dirname $0`/.aliasrc
+. $rc/.aliasrc
 
 bindkey '^H' backward-kill-word
 bindkey '^[[3;5~' kill-word
