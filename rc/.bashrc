@@ -9,7 +9,7 @@ export PATH="/home/zanedufour/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-export EDITOR="code --wait"
+export EDITOR="code --wait --new-editor"
 
 #
 . $rc/.aliasrc

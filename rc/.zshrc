@@ -13,7 +13,7 @@ export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
 
 eval "$(pyenv init -)"
 
-export EDITOR="code --wait"
+export EDITOR="code --wait --new-window"
 
 . $rc/.aliasrc
 
