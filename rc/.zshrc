@@ -27,6 +27,9 @@ if type brew &>/dev/null; then
   autoload -U +X compinit && compinit
 fi
 
+# Add coreutils to path
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+
 # Created by `pipx` on 2021-03-25 17:57:03
 export PATH="$PATH:$HOME/.local/bin"
 eval "$(register-python-argcomplete pipx)" || echo "Try brew install pipx"
