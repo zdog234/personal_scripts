@@ -5,7 +5,13 @@ alias gd="git diff"
 alias gp="git push"
 alias gs="git status"
 alias ktl="kubectl"
-alias remimp="autoflake --in-place --remove-unused-variables --recursive --remove-all-unused-imports ."
+alias remimp="autoflake \
+        --in-place \
+        --remove-unused-variables \
+        --recursive \
+        --remove-all-unused-imports \
+        --ignore-init-module-imports \
+        ."
 
 
 
