@@ -5,6 +5,9 @@ alias gd="git diff"
 alias gp="git push"
 alias gs="git status"
 alias ktl="kubectl"
+alias kget="ktl get"
+alias kdel="ktl del"
+alias klogs="ktl logs"
 alias remimp="autoflake \
         --in-place \
         --remove-unused-variables \
