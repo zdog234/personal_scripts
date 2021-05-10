@@ -48,3 +48,6 @@ if [ -f /usr/local/share/liquidprompt ]; then
 else
     echo "liquidprompt not installed -- brew install liquidprompt"
 fi
+
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
