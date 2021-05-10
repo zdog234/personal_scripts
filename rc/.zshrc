@@ -49,5 +49,4 @@ else
     echo "liquidprompt not installed -- brew install liquidprompt"
 fi
 
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
+eval "$($HOME/.pyenv/bin/pyenv init --path)"
