@@ -13,6 +13,11 @@ export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
 
 export PIPENV_VENV_IN_PROJECT=true
 
+# openblas environment variables
+export LDFLAGS="-L/usr/local/opt/openblas/lib"
+export CPPFLAGS="-I/usr/local/opt/openblas/include"
+export PKG_CONFIG_PATH="/usr/local/opt/openblas/lib/pkgconfig"
+
 
 export EDITOR="code --wait --new-window"
 
