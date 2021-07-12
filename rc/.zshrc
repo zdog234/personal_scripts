@@ -21,6 +21,11 @@ export LDFLAGS="$LDFLAGS -L/usr/local/opt/openblas/lib"
 export CPPFLAGS="$CPPFLAGS -I/usr/local/opt/openblas/include"
 export PKG_CONFIG_PATH="/usr/local/opt/openblas/lib/pkgconfig:$PKG_CONFIG_PATH"
 
+export LDFLAGS="$LDFLAGS -L/usr/local/opt/lapack/lib"
+export CPPFLAGS="$CPPFLAGS -I/usr/local/opt/lapack/include"
+export PKG_CONFIG_PATH="/usr/local/opt/lapack/lib/pkgconfig:$PKG_CONFIG_PATH"
+
+
 # lapack environment variables
 export LDFLAGS="$LDFLAGS -L/usr/local/opt/lapack/lib"
 export CPPFLAGS="$CPPFLAGS -I/usr/local/opt/lapack/include"
