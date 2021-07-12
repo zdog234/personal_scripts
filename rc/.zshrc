@@ -6,12 +6,15 @@ rc=`dirname $0`
 scripts="$rc/.."
 scripts=$scripts:A
 
+# pipenv config
+export PIPENV_VENV_IN_PROJECT=true
+export POETRY_VIRTUALENVS_IN_PROJECT="true"
+
 # compiler stuff
 export LDFLAGS="-L/usr/local/opt/zlib/lib"
 export CPPFLAGS="-I/usr/local/opt/zlib/include"
 export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
 
-export PIPENV_VENV_IN_PROJECT=true
 
 # openblas environment variables
 export LDFLAGS="$LDFLAGS -L/usr/local/opt/openblas/lib"
