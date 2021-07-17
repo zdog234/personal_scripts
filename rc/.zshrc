@@ -15,7 +15,7 @@ export LDFLAGS="-L/usr/local/opt/zlib/lib"
 export CPPFLAGS="-I/usr/local/opt/zlib/include"
 export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
 
-[[ $- = *i* ]] && source ~/liquidprompt/liquidprompt
+[[ $- = *i* ]] && source ~/.liquidprompt/liquidprompt
 
 # openblas environment variables
 export LDFLAGS="$LDFLAGS -L/usr/local/opt/openblas/lib"
