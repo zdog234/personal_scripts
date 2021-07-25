@@ -25,6 +25,16 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# py3x
+alias py="python3"
+alias py3="py3"
+alias py36="python3.6"
+alias py37="python3.7"
+alias py38="python3.8"
+alias py39="python3.9"
+alias py310="python3.10"
+
+
 # ipython
 alias ipy="python3 -m IPython"
 alias ipy3="python3 -m IPython"
