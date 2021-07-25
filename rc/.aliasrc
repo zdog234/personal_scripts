@@ -18,6 +18,8 @@ alias remimp="autoflake \
         --ignore-init-module-imports \
         ."
 
+# copy to clipboard
+alias xclip="xclip -selection c"
 
 
 # some more ls aliases
