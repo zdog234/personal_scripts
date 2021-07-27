@@ -67,4 +67,12 @@ else
     echo "liquidprompt not installed -- brew install liquidprompt"
 fi
 
-eval "$($HOME/.pyenv/bin/pyenv init --path)"
+export PATH="$HOME/.pyenv/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
+export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
+
+# eval "$($HOME/.pyenv/bin/pyenv init --path)"
