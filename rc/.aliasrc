@@ -29,7 +29,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # gcloud
-alias gssh='gcloud alpha cloud-shell ssh'
+alias gssh='gcloud alpha cloud-shell ssh --authorize-session'
 
 # py3x
 alias py="python3"
