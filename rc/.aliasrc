@@ -1,5 +1,5 @@
 alias tn="terminal-notifier"
-alias ls="ls --color"
+alias ls="ls --color=auto"
 alias dc="docker-compose"
 alias ga="git add" 
 alias gc="git commit"
@@ -27,6 +27,9 @@ alias xclip="xclip -selection c"
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+# gcloud
+alias gssh='gcloud alpha cloud-shell'
 
 # py3x
 alias py="python3"

@@ -6,8 +6,6 @@ rc=`dirname $0`
 scripts="$rc/.."
 scripts=$scripts:A
 
-# Add colors to LS
-export LS_COLORS=auto
 
 # pipenv config
 export PIPENV_VENV_IN_PROJECT=true
