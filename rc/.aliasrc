@@ -30,6 +30,11 @@ alias l='ls -CF'
 
 # gcloud
 alias gssh='gcloud alpha cloud-shell ssh --authorize-session'
+alias gsshmount='gcloud alpha cloud-shell get-mount-command'
+
+# prettier
+alias prettier="npx prettier"
+alias pr=prettier
 
 # py3x
 alias py="python3"
