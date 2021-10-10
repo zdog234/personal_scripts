@@ -36,6 +36,9 @@ alias gsshmount='gcloud alpha cloud-shell get-mount-command'
 alias prettier="npx prettier"
 alias pr=prettier
 
+# Signal Desktop App
+alias signal="/Applications/Signal.app/Contents/MacOS/Signal"
+
 # py3x
 alias py="python3"
 alias py3="py3"
