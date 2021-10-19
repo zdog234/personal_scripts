@@ -77,3 +77,8 @@ export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
 export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
 
 # eval "$($HOME/.pyenv/bin/pyenv init --path)"
+export PY_PYTHON=$(pyenv exec python -c "import sys; print('.'.join(map(str, sys.version_info[:2])))")
+# for the py launcher
+
+# Add starship
+eval "$(starship init zsh)"
