@@ -16,7 +16,7 @@ export LDFLAGS="-L/usr/local/opt/zlib/lib"
 export CPPFLAGS="-I/usr/local/opt/zlib/include"
 export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
 
-[[ $- = *i* ]] && source ~/.liquidprompt/liquidprompt
+# [[ $- = *i* ]] && source ~/.liquidprompt/liquidprompt
 
 # openblas environment variables
 export LDFLAGS="$LDFLAGS -L/usr/local/opt/openblas/lib"
@@ -61,12 +61,12 @@ fi
 
 export PATH="$HOME/.poetry/bin:$PATH"
 
-# liquid prompt
-if [ -f /usr/local/share/liquidprompt ]; then
-    . /usr/local/share/liquidprompt
-else
-    echo "liquidprompt not installed -- brew install liquidprompt"
-fi
+# # liquid prompt
+# if [ -f /usr/local/share/liquidprompt ]; then
+#     . /usr/local/share/liquidprompt
+# else
+#     echo "liquidprompt not installed -- brew install liquidprompt"
+# fi
 
 export PATH="$HOME/.pyenv/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
