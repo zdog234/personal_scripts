@@ -1,11 +1,13 @@
 shout() { echo "$0: $*" >&2; }
-die() { shout "$*"; exit 111; }
+die() {
+  shout "$*"
+  exit 111
+}
 try() { "$@" || die "cannot $*"; }
 
-rc=`dirname $0`
+rc=$(dirname $0)
 scripts="$rc/.."
 scripts=$scripts:A
-
 
 # pipenv config
 export PIPENV_VENV_IN_PROJECT=true
@@ -27,19 +29,15 @@ export LDFLAGS="$LDFLAGS -L/usr/local/opt/lapack/lib"
 export CPPFLAGS="$CPPFLAGS -I/usr/local/opt/lapack/include"
 export PKG_CONFIG_PATH="/usr/local/opt/lapack/lib/pkgconfig:$PKG_CONFIG_PATH"
 
-
 # lapack environment variables
 export LDFLAGS="$LDFLAGS -L/usr/local/opt/lapack/lib"
 export CPPFLAGS="$CPPFLAGS -I/usr/local/opt/lapack/include"
 export PKG_CONFIG_PATH="/usr/local/opt/lapack/lib/pkgconfig:$PKG_CONFIG_PATH"
 
-export EDITOR="code --wait --new-window"
-
 . $rc/.aliasrc
 
 bindkey '^H' backward-kill-word
 bindkey '^[[3;5~' kill-word
-
 
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
@@ -54,9 +52,8 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="$PATH:$HOME/.local/bin"
 eval "$(register-python-argcomplete pipx)" || echo "Try brew install pipx"
 # Poetry
-if ! [ -f "$HOME/.poetry/bin/poetry" ]
-then
-    printf "Install poetry:\nhttps://python-poetry.org/docs/#osx-linux-bashonwindows-install-instructions"
+if ! [ -f "$HOME/.poetry/bin/poetry" ]; then
+  printf "Install poetry:\nhttps://python-poetry.org/docs/#osx-linux-bashonwindows-install-instructions"
 fi
 
 export PATH="$HOME/.poetry/bin:$PATH"
